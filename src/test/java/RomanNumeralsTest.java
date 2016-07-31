@@ -161,4 +161,36 @@ public class RomanNumeralsTest {
 	public void shouldReturnM() throws Exception {
 		assertEquals("M", rn.romanOfNum(1000));
 	}
+	
+	//Trickiest numbers
+	@Test
+	public void shouldReturnXXXIX() throws Exception {
+		assertEquals("XXXIX", rn.romanOfNum(39));
+	}
+	
+	@Test
+	public void shouldReturnXLIV() throws Exception {
+		assertEquals("XLIV", rn.romanOfNum(44));
+	}
+	
+	@Test
+	public void shouldReturnMIM() throws Exception {
+		assertEquals("MIM", rn.romanOfNum(1999));
+	}
+	
+	@Test
+	public void shouldReturnCMXCVIII() throws Exception {
+		assertEquals("CMXCVIII", rn.romanOfNum(998));
+	}
+
+	@Test
+	public void shouldReturnMMMMMMMMMCDXCV() throws Exception {
+		assertEquals("MMMMMMMMMCDXCV", rn.romanOfNum(9495));
+	}
+	
+	@Test
+	public void shouldReturnMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMCCCIL() throws Exception {
+		assertEquals("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMCCCIL", rn.romanOfNum(45349));
+	}
+	
 }

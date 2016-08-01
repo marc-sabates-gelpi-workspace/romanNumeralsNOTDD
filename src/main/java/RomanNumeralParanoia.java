@@ -1,5 +1,5 @@
 
-public class RomanNumeral {
+public class RomanNumeralParanoia {
 
 	public static final String I = "I";
 	public static final String IV = "IV";
@@ -19,23 +19,22 @@ public class RomanNumeral {
 
 	public static String roman(int number) {
 		String romanNumber = "";
-		int times;
 		
-		for (int i = 0; i < values.length && number != 0; i++){
-			if(number >= values[i]) {
-				times = number / values[i];
-				number = number % values[i];
-				romanNumber += retrieveSymbol(i, times);
+		for (int i = 0; i < values.length; i++){
+			if(number == values[i]) {
+				romanNumber += symbols[i];
+				break;
+			} else if (number > values[i]) {
+				romanNumber += repeatSymbol(symbols[i], number / values[i]);
+				number %= values[i];
 			}
 		}
 		return romanNumber;
 	}
 
-	private static String retrieveSymbol(int position, int times) {
+	private static String repeatSymbol(String symbol, int times) {
 		String result = "";
-		for(int i = 0; i < times; i++) {
-			result += symbols[position];
-		}
+		for(int i = 0; i < times; i++) result += symbol;
 		return result;
 	}
 

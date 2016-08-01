@@ -1,5 +1,5 @@
 
-public class RomanNumeral {
+public class RomanNumeralOriginal {
 
 	public static final String I = "I";
 	public static final String IV = "IV";
@@ -19,16 +19,23 @@ public class RomanNumeral {
 
 	public static String roman(int number) {
 		String romanNumber = "";
-		int times;
+		int divisorPosition, times;
 		
-		for (int i = 0; i < values.length && number != 0; i++){
-			if(number >= values[i]) {
-				times = number / values[i];
-				number = number % values[i];
-				romanNumber += retrieveSymbol(i, times);
-			}
+		while (number != 0){
+			divisorPosition = findBiggestDivisorPosition(number);
+			times = number / values[divisorPosition];
+			number = number % values[divisorPosition];
+			romanNumber += retrieveSymbol(divisorPosition, times);
 		}
+		
 		return romanNumber;
+	}
+
+	private static int findBiggestDivisorPosition(int number) {
+		for (int i = 0; i < values.length; i++){
+			if(number >= values[i]) return i;
+		}
+		return 0;
 	}
 
 	private static String retrieveSymbol(int position, int times) {

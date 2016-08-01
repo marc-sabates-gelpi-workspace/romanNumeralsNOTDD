@@ -14,183 +14,183 @@ public class RomanNumeralsTest {
 	
 	@Test
 	public void shouldReturnI() {
-		assertEquals("I", rn.romanOfNum(1));
+		assertEquals("I", rn.roman(1));
 	}
 	
 	@Test
 	public void shouldReturnII() throws Exception {
-		assertEquals("II", rn.romanOfNum(2));
+		assertEquals("II", rn.roman(2));
 	}
 	
 	@Test
 	public void shouldReturnIII() throws Exception {
-		assertEquals("III", rn.romanOfNum(3));
+		assertEquals("III", rn.roman(3));
 	}
 	
 	@Test
 	public void shouldReturnIV() throws Exception {
-		assertEquals("IV", rn.romanOfNum(4));
+		assertEquals("IV", rn.roman(4));
 	}
 	
 	@Test
 	public void shouldReturnV() throws Exception {
-		assertEquals("V", rn.romanOfNum(5));
+		assertEquals("V", rn.roman(5));
 	}
 	
 	@Test
 	public void shouldReturnVI() throws Exception {
-		assertEquals("VI", rn.romanOfNum(6));
+		assertEquals("VI", rn.roman(6));
 	}
 	
 	@Test
 	public void shouldReturnVII() throws Exception {
-		assertEquals("VII", rn.romanOfNum(7));
+		assertEquals("VII", rn.roman(7));
 	}
 	
 	@Test
 	public void shouldReturnVIII() throws Exception {
-		assertEquals("VIII", rn.romanOfNum(8));
+		assertEquals("VIII", rn.roman(8));
 	}
 	
 	@Test
 	public void shouldReturnIX() throws Exception {
-		assertEquals("IX", rn.romanOfNum(9));
+		assertEquals("IX", rn.roman(9));
 	}
 	
 	@Test
 	public void shouldReturnX() throws Exception {
-		assertEquals("X", rn.romanOfNum(10));
+		assertEquals("X", rn.roman(10));
 	}
 	
 	@Test
 	public void shouldReturnXI() {
-		assertEquals("XI", rn.romanOfNum(11));
+		assertEquals("XI", rn.roman(11));
 	}
 	
 	@Test
 	public void shouldReturnXII() throws Exception {
-		assertEquals("XII", rn.romanOfNum(12));
+		assertEquals("XII", rn.roman(12));
 	}
 	
 	@Test
 	public void shouldReturnXIII() throws Exception {
-		assertEquals("XIII", rn.romanOfNum(13));
+		assertEquals("XIII", rn.roman(13));
 	}
 	
 	@Test
-	public void shouldReturnIL() throws Exception {
-		assertEquals("IL", rn.romanOfNum(49));
+	public void shouldReturnXLIX() throws Exception {
+		assertEquals("XLIX", rn.roman(49));
 	}
 	
 	@Test
 	public void shouldReturnL() throws Exception {
-		assertEquals("L", rn.romanOfNum(50));
+		assertEquals("L", rn.roman(50));
 	}
 	
 	@Test
 	public void shouldReturnLI() {
-		assertEquals("LI", rn.romanOfNum(51));
+		assertEquals("LI", rn.roman(51));
 	}
 	
 	@Test
 	public void shouldReturnLII() throws Exception {
-		assertEquals("LII", rn.romanOfNum(52));
+		assertEquals("LII", rn.roman(52));
 	}
 	
 	@Test
 	public void shouldReturnLIII() throws Exception {
-		assertEquals("LIII", rn.romanOfNum(53));
+		assertEquals("LIII", rn.roman(53));
 	}
 	
 	@Test
-	public void shouldReturnIC() throws Exception {
-		assertEquals("IC", rn.romanOfNum(99));
+	public void shouldReturnXCIX() throws Exception {
+		assertEquals("XCIX", rn.roman(99));
 	}
 	
 	@Test
 	public void shouldReturnC() throws Exception {
-		assertEquals("C", rn.romanOfNum(100));
+		assertEquals("C", rn.roman(100));
 	}
 	
 	@Test
 	public void shouldReturnCI() {
-		assertEquals("CI", rn.romanOfNum(101));
+		assertEquals("CI", rn.roman(101));
 	}
 	
 	@Test
 	public void shouldReturnCII() throws Exception {
-		assertEquals("CII", rn.romanOfNum(102));
+		assertEquals("CII", rn.roman(102));
 	}
 	
 	@Test
 	public void shouldReturnCIII() throws Exception {
-		assertEquals("CIII", rn.romanOfNum(103));
+		assertEquals("CIII", rn.roman(103));
 	}
 	
 	@Test
-	public void shouldReturnID() throws Exception {
-		assertEquals("ID", rn.romanOfNum(499));
+	public void shouldReturnCDXCIX() throws Exception {
+		assertEquals("CDXCIX", rn.roman(499));
 	}
 	
 	@Test
 	public void shouldReturnD() throws Exception {
-		assertEquals("D", rn.romanOfNum(500));
+		assertEquals("D", rn.roman(500));
 	}
 	
 	@Test
 	public void shouldReturnDI() {
-		assertEquals("DI", rn.romanOfNum(501));
+		assertEquals("DI", rn.roman(501));
 	}
 	
 	@Test
 	public void shouldReturnDII() throws Exception {
-		assertEquals("DII", rn.romanOfNum(502));
+		assertEquals("DII", rn.roman(502));
 	}
 	
 	@Test
 	public void shouldReturnDIII() throws Exception {
-		assertEquals("DIII", rn.romanOfNum(503));
+		assertEquals("DIII", rn.roman(503));
 	}
 	
 	@Test
-	public void shouldReturnIM() throws Exception {
-		assertEquals("IM", rn.romanOfNum(999));
+	public void shouldReturnCMXCIX() throws Exception {
+		assertEquals("CMXCIX", rn.roman(999));
 	}
 	
 	@Test
 	public void shouldReturnM() throws Exception {
-		assertEquals("M", rn.romanOfNum(1000));
+		assertEquals("M", rn.roman(1000));
 	}
 	
 	//Trickiest numbers
 	@Test
 	public void shouldReturnXXXIX() throws Exception {
-		assertEquals("XXXIX", rn.romanOfNum(39));
+		assertEquals("XXXIX", rn.roman(39));
 	}
 	
 	@Test
 	public void shouldReturnXLIV() throws Exception {
-		assertEquals("XLIV", rn.romanOfNum(44));
+		assertEquals("XLIV", rn.roman(44));
 	}
 	
 	@Test
-	public void shouldReturnMIM() throws Exception {
-		assertEquals("MIM", rn.romanOfNum(1999));
+	public void shouldReturnMCMXCIX() throws Exception {
+		assertEquals("MCMXCIX", rn.roman(1999));
 	}
 	
 	@Test
 	public void shouldReturnCMXCVIII() throws Exception {
-		assertEquals("CMXCVIII", rn.romanOfNum(998));
+		assertEquals("CMXCVIII", rn.roman(998));
 	}
 
 	@Test
 	public void shouldReturnMMMMMMMMMCDXCV() throws Exception {
-		assertEquals("MMMMMMMMMCDXCV", rn.romanOfNum(9495));
+		assertEquals("MMMMMMMMMCDXCV", rn.roman(9495));
 	}
 	
 	@Test
-	public void shouldReturnMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMCCCIL() throws Exception {
-		assertEquals("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMCCCIL", rn.romanOfNum(45349));
+	public void shouldReturnMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMCCCXLIX() throws Exception {
+		assertEquals("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMCCCXLIX", rn.roman(45349));
 	}
 	
 }
